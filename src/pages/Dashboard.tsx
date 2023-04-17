@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-interface DashboardProps {
+interface LedgerProps {
   id: number;
   title: string;
   amount: number;
   type: string;
 }
 
-const Dashboard: React.FC<DashboardProps> = ({ id, title, amount, type }) => {
+const Ledger: React.FC<LedgerProps> = ({ id, title, amount, type }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedTitle, setUpdatedTitle] = useState(title);
   const [updatedAmount, setUpdatedAmount] = useState(amount);
@@ -53,7 +53,7 @@ const Dashboard: React.FC<DashboardProps> = ({ id, title, amount, type }) => {
               Save
             </button>
             <button
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4   rounded"
               onClick={handleCancel}
             >
               Cancel
@@ -86,4 +86,4 @@ const Dashboard: React.FC<DashboardProps> = ({ id, title, amount, type }) => {
   );
 };
 
-export default Dashboard;
+export default Ledger;
