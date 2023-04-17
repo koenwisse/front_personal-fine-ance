@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 /* Customize styles here */
+.transaction-bg {
+  background-color: #f9fafb;
+}

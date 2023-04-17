@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-interface LedgerProps {
+interface DashboardProps {
   id: number;
   title: string;
   amount: number;
-  type: "income" | "expense";
+  type: string;
 }
 
-const Transaction: React.FC<LedgerProps> = ({ id, title, amount, type }) => {
+const Dashboard: React.FC<DashboardProps> = ({ id, title, amount, type }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedTitle, setUpdatedTitle] = useState(title);
   const [updatedAmount, setUpdatedAmount] = useState(amount);
@@ -32,7 +32,7 @@ const Transaction: React.FC<LedgerProps> = ({ id, title, amount, type }) => {
   };
 
   return (
-    <div className="border rounded-md p-4 mb-4">
+    <div className="border rounded-md p-4 mb-4 transaction-bg">
       {isEditing ? (
         <div>
           <input
@@ -86,4 +86,4 @@ const Transaction: React.FC<LedgerProps> = ({ id, title, amount, type }) => {
   );
 };
 
-export default Transaction;
+export default Dashboard;
