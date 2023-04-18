@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "../pages/Dashboard";
+import Ledger from "../pages/Ledger";
 
 interface TransactionListProps {
   transactions: Array<{
@@ -14,7 +14,7 @@ const TransactionList: React.FC<TransactionListProps> = ({ transactions }) => {
   return (
     <div className="max-w-screen-lg mx-auto">
       {transactions.map((transaction) => (
-        <Dashboard
+        <Ledger
           key={transaction.id}
           id={transaction.id}
           title={transaction.title}
